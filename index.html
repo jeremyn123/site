@@ -28,10 +28,13 @@
     Your browser does not support the audio tag
   </audio>
   
-  <script>
-    document.addEventListener('click', function() {
-      document.getElementById('bg-audio').muted = false;
-    });
-  </script>
+<script>
+  function unmuteAudio() {
+    var audio = document.getElementById('bg-audio');
+    audio.muted = false;
+  }
+
+  document.addEventListener('click', unmuteAudio);
+</script>
 </body>
 </html>
