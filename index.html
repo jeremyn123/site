@@ -18,24 +18,21 @@
 </style>
 </head>
 <body>
-  <video autoplay muted loop id="bg-video">
-    <source type="video/mp4" src="assets/video.mp4">
-    Your browser does not support the video tag
-  </video>
-  
-    <audio autoplay muted loop id="bg-audio">
-    <source type="audio/mp3" src="assets/audio.mp3">
-    Your browser does not support the audio tag
-  </audio>
-  
-<script>
-  function unmuteAudio() {
-    var audio = document.getElementById('bg-audio');
-    audio.muted = false;
-  }
-
-  var video = document.getElementById('bg-video');
-  video.addEventListener('click', unmuteAudio);
-</script>
+	<audio id="audio" autoplay>
+		<source src="your-audio-file.mp3" type="audio/mpeg">
+	</audio>
+	<video autoplay loop muted>
+		<source src="your-video-file.mp4" type="video/mp4">
+	</video>
+	<script>
+		var audio = document.getElementById("audio");
+		audio.addEventListener("click", function() {
+			if (audio.muted == false) {
+				audio.muted = true;
+			} else {
+				audio.muted = false;
+			}
+		});
+	</script>
 </body>
 </html>
