@@ -27,10 +27,13 @@
     <source src="assets/audio.mp3">
   </audio>
 
-  <script>
-    function unmuteAudio() {
-      document.getElementById("audio").muted = false;
-    }
+   <script>
+    document.addEventListener("click", function() {
+      var audio = document.getElementById("audio");
+      audio.muted = false;
+      audio.play();
+    });
   </script>
+  
 </body>
 </html>
