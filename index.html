@@ -18,21 +18,27 @@
 </style>
 </head>
 <body>
-	<audio id="audio" autoplay loop muted>
-		<source src="assets/audio.mp3" type="audio/mpeg">
-	</audio>
+	<iframe src="assets/silence.mp3" allow="autoplay" id="audio" style="display: none"></iframe>
+	
+	
 	<video autoplay loop muted>
 		<source src="assets/video.mp4" type="video/mp4">
 	</video>
+	
+	<audio id="audio" autoplay loop>
+		<source src="assets/audio.mp3">
+	</audio>
+	
 	<script>
-		var audio = document.getElementById("audio");
-		audio.addEventListener("click", function() {
-			if (audio.muted == false) {
-				audio.muted = true;
-			} else {
-				audio.muted = false;
-			}
-		});
-	</script>
+  document.addEventListener('click', function() {
+    document.getElementById('audio').muted = false;
+  });
+		
+		window.onload = function() {
+  var context = new AudioContext();
+};
+		
+</script>
+	
 </body>
 </html>
