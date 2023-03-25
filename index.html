@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>hahaha</title>
-<style>video { 
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	width: 100%;
-	height: 100%;
-	z-index: -1;
-	background-color: #111111;
-	background-size: cover;
-	transform: translate(-50%, -50%);
-	object-fit: cover;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>hahaha</title>
+  <style>
+    video {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background-color: #111111;
+      background-size: cover;
+      transform: translate(-50%, -50%);
+      object-fit: cover;
+    }
+  </style>
 </head>
-<body>
-	<iframe id="yt" style="z-index: -100;" width="560" height="315" src="https://www.youtube.com/embed/Vbks4abvLEw?controls=0&autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-	
-	
-	<video autoplay loop muted>
-		<source src="assets/video.mp4">
-	</video>
-	
-	<audio id="audio2" autoplay loop>
-		<source src="assets/audio.mp3">
-	</audio>
-	
-	<script>
-  document.addEventListener('click', function() {
-    document.getElementById('audio2').muted = false;
-  });
-		
-		window.onload = function() {
-  var context = new AudioContext();
-};
-		
-</script>
-	
+<body onmousedown="unmuteAudio()" ontouchstart="unmuteAudio()">
+  <video autoplay loop muted>
+    <source src="assets/video.mp4">
+  </video>
+
+  <audio id="audio" autoplay loop muted>
+    <source src="assets/audio.mp3">
+  </audio>
+
+  <script>
+    function unmuteAudio() {
+      document.getElementById("audio").muted = false;
+    }
+  </script>
 </body>
 </html>
