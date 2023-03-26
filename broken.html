@@ -33,11 +33,16 @@
   100% { transform: rotate(360deg); }
 }
 	</style>
-	
-	<iframe src=”assets/silence.mp3″ volume="0.5" type=”audio/mp3″ allow=”autoplay” id=”audio” style=”display:none”></iframe>
-<audio autoplay>
-<source src=”assets/audio.mp3″ type=”audio/mp3″>
-</audio>
+
+	<video autoplay loop muted>
+    <source src="assets/audio.mp3" />
+</video>
+
+<script>
+    window.onload = function () {
+        document.querySelector("video").muted = false;
+    };
+</script>
 	
 </head>
 <body>
