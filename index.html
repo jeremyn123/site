@@ -23,7 +23,7 @@
     <source src="assets/video.mp4">
   </video>
 
-  <audio id="audio" autoplay loop muted>
+  <audio id="audio" autoplay loop muted volume="0.5">
     <source src="assets/audio.mp3">
   </audio>
 
@@ -33,6 +33,11 @@
       audio.muted = false;
       audio.play();
     });
+    
+       var audio = document.getElementById("audio");
+  audio.currentTime = 20;
+     
+     
   </script>
   
 </body>
