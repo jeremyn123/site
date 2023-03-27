@@ -23,7 +23,7 @@
     <source src="assets/video.mp4">
   </video>
 
-  <audio id="audio" autoplay loop muted volume="0.10">
+  <audio id="audio" autoplay loop muted>
     <source src="assets/audio.mp3">
   </audio>
 
@@ -36,7 +36,9 @@
     
        var audio = document.getElementById("audio");
   audio.currentTime = 20;
-     
+    
+     const audioElement = document.getElementById('my-audio');
+audioElement.volume = 0.5; // set volume to 50%
      
   </script>
   
